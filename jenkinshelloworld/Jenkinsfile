@@ -1,0 +1,14 @@
+
+
+node{
+    stage "Checkout"
+
+    git url: 'https://github.com/wenbinhuang9/play-with-jenkins.git'
+
+    stage 'Build'
+
+    sh 'cd /Users/ben/Wenbin_GitHub/play-with-jenkins/jenkinshelloworld'
+
+    sh 'mvn -Dmaven.test.failure.ignore clean package'
+    
+}
